@@ -1,8 +1,17 @@
-import { extendTheme } from "@chakra-ui/react";
+import { Rubik, Inter } from 'next/font/google'
 
-export const theme = extendTheme({
-    fonts: {
-      heading: 'var(--font-rubik)',
-      body: 'var(--font-rubik)',
-    }
-});
+const rubik = Rubik({
+  subsets: ['latin'],
+  variable: '--font-rubik',
+})
+
+const inter = Inter({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-inter',
+})
+
+export const fonts = {
+  rubik,
+  inter
+}
